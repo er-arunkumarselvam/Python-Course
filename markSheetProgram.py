@@ -7,4 +7,4 @@ while min_no_of_subject<=no_of_subjects:
     total+=subject
     min_no_of_subject+=1
 print("Your Total Mark is ", total)
-print("Your Percentage is ",total/no_of_subjects)
+print("Your Percentage is ",round(total/no_of_subjects,2))
