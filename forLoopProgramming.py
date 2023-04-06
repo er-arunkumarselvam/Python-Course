@@ -26,7 +26,7 @@ print("Total a range of numbers",firstNumber," to", secondNumber," is : ",total)
 total=0
 for no in range(5,20,2):
     total+=no
-print("Total a range of numbers 5 to 20  with step 2 is : ",total)"""
+print("Total a range of numbers 5 to 20  with step 2 is : ",total)
 #print odd number only
 print("Odd Numbers Only : ")
 for i in range(101):
@@ -59,5 +59,44 @@ word2=word[::-1]
 if word==word2:
     print("The given word",word,"is palindrome")
 else:
-    print("The given word",word,"is Not palindrome")
+    print("The given word",word,"is Not palindrome")"""
 
+#sentence
+sentence ="All is Well"
+for letter in sentence:
+        print(letter,end=" ")
+print()
+#sentence find vowls
+sentence ="All is Well"
+for letter in sentence:
+    if letter in ['a','e','i','o','u','A','E','I','O','U']:
+        print(letter,end=" ")
+print()
+#find the no. of words
+sentence="My name is Arunkumar"
+count=1
+space=" "
+for letter in sentence:
+    if letter in space:
+        count+=1
+print("No. of words present is : ",count)
+#find the no. of sentence
+sentence="My name is Arunkumar. I completed BE. I am from Kumbakonam."
+count=0
+for letter in sentence:
+    if letter ==".":
+        count+=1
+print("No. of sentence present is : ",count)
+print()
+#print capital letter using ord()
+for letter in range(ord('A'),ord('Z')+1):
+    print(chr(letter),end=" ")
+print()
+# print capital letter using ASCII value
+for letter in range(65, 91):
+    print(chr(letter), end=" ")
+print()
+#using pass
+for number in [1]:
+    pass
+print("Hello",number)
