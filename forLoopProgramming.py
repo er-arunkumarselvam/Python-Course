@@ -61,42 +61,65 @@ if word==word2:
 else:
     print("The given word",word,"is Not palindrome")"""
 
-#sentence
-sentence ="All is Well"
-for letter in sentence:
-        print(letter,end=" ")
-print()
-#sentence find vowls
-sentence ="All is Well"
-for letter in sentence:
-    if letter in ['a','e','i','o','u','A','E','I','O','U']:
-        print(letter,end=" ")
-print()
-#find the no. of words
-sentence="My name is Arunkumar"
-count=1
-space=" "
-for letter in sentence:
-    if letter in space:
-        count+=1
-print("No. of words present is : ",count)
-#find the no. of sentence
-sentence="My name is Arunkumar. I completed BE. I am from Kumbakonam."
-count=0
-for letter in sentence:
-    if letter ==".":
-        count+=1
-print("No. of sentence present is : ",count)
-print()
-#print capital letter using ord()
-for letter in range(ord('A'),ord('Z')+1):
-    print(chr(letter),end=" ")
-print()
-# print capital letter using ASCII value
-for letter in range(65, 91):
-    print(chr(letter), end=" ")
-print()
-#using pass
-for number in [1]:
-    pass
-print("Hello",number)
+# #sentence
+# sentence ="All is Well"
+# for letter in sentence:
+#         print(letter,end=" ")
+# print()
+# #sentence find vowls
+# sentence ="All is Well"
+# for letter in sentence:
+#     if letter in ['a','e','i','o','u','A','E','I','O','U']:
+#         print(letter,end=" ")
+# print()
+# #find the no. of words
+# sentence="My name is Arunkumar"
+# count=1
+# space=" "
+# for letter in sentence:
+#     if letter in space:
+#         count+=1
+# print("No. of words present is : ",count)
+# #find the no. of sentence
+# sentence="My name is Arunkumar. I completed BE. I am from Kumbakonam."
+# count=0
+# for letter in sentence:
+#     if letter ==".":
+#         count+=1
+# print("No. of sentence present is : ",count)
+# print()
+# #print capital letter using ord()
+# for letter in range(ord('A'),ord('Z')+1):
+#     print(chr(letter),end=" ")
+# print()
+# # print capital letter using ASCII value
+# for letter in range(65, 91):
+#     print(chr(letter), end=" ")
+# print()
+# #using pass
+# for number in [1]:
+#     pass
+# print("Hello",number)
+#program
+user=input("Enter your mail id : ")
+# i=0
+# while i<len(user):
+#     print(user[i],end=" ")
+#ASCII Value
+# 65-91 - A-Z
+# 97-122 - a-z
+# 48-57 - 0-9
+length=len(user)
+countOfNumbers=0
+countOfAlphabet=0
+countOfSpecialChar=0
+for no in range(length):
+    if((user[no]>='A'and user[no]<='Z')or(user[no]>='a'and user[no]<='z')):
+        countOfAlphabet=countOfAlphabet+1
+    elif (user[no]>='0'and user[no]<='9'):
+        countOfNumbers=countOfNumbers+1
+    else:
+        countOfSpecialChar=countOfSpecialChar+1
+print("countAlpha : ",countOfAlphabet)
+print("countNum : ",countOfNumbers)
+print("countSpecial : ",countOfSpecialChar)
