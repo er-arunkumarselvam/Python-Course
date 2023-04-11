@@ -123,3 +123,11 @@ while row>=1:
         col+=1
     print()
     row-=1
+print()
+name="Arunkumar"
+count=len(name)
+for terms in range(count):
+    for letter in range(count):
+        print(name[letter],end=" ")
+    print()
+    count-=1
