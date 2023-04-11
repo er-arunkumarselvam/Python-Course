@@ -19,10 +19,12 @@ else:
     password = input("Enter your password (min:8) : ")
 for no in range(length):
         if(password[no]>='a'and password[no]<='z'):
+        #if((password[no].isalpha())):
             countLowerCase=countLowerCase+1
         elif (password[no]>='A'and password[no]<='Z'):
             countUpperCase=countUpperCase+1
         elif (password[no]>='0'and password[no]<='9'):
+        #elif((password[no].isdigit())):
             countNumber=countNumber+1
         elif (password[no]or['#','@','$','.','&','!','%']):
             countSpecial=countSpecial+1
