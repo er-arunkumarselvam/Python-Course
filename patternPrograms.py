@@ -131,3 +131,44 @@ for terms in range(count):
         print(name[letter],end=" ")
     print()
     count-=1
+print()
+count=5
+terms=0
+for terms in range(count):
+    for row in range(count):
+        print(" ",end=" ")
+    for col in range(terms+1):
+        print("*",end=" ")
+    print()
+    count-=1
+print()
+count=5
+terms=0
+for terms in range(count):
+    for row in range(count):
+        print(" ",end=" ")
+    for col in range(terms+1):
+        print("*  ",end=" ")
+    print()
+    count-=1
+print()
+count=5
+terms=0
+for terms in range(count):
+    for row in range(count):
+        print(" ",end=" ")
+    for col in range(terms+1):
+        print(chr(col+65),end="   ")
+    print()
+    count-=1
+print()
+count=5
+terms=0
+for terms in range(count):
+    for row in range(count):
+        print(" ",end=" ")
+    for col in range(terms+1):
+        print(chr(col+65),end=" ")
+    print()
+    count-=1
+print()
