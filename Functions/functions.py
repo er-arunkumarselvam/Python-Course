@@ -129,3 +129,5 @@ def totalPrice(*amount):  # Get all the parametes using variable length argument
 
 print()
 totalPrice(100, 90, 5, 5)  # sellingprice = 100, buyingprice = 90, SGST = 5, CGST = 5
+print(id(x))
+
