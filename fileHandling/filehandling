@@ -1,0 +1,90 @@
+File Handling
+
+Text File - .txt, .pdf, .docs
+Binary File - image, video, audio
+
+open
+file = open(filename, mode)
+ex :
+    file = open("D:\\Practice\\Python-Course\\fileHandling\\test", "w")
+                                        or
+    file = open(r"D:\Practice\Python-Course\fileHandling\test", "w")
+    \ - is different meaning of python using \\.
+    r - raw
+Types of modes in text file
+r - read
+w - write
+a - append
+r+ - read and write
+w+ - write and read
+a+ - append and read
+x - exclusive
+
+Default value mode is readable.
+
+read:
+    - file pointer will be present at the beginning of the file
+    - file is not present (FileNotFound) Error
+write:
+    - existing content of the file will be overridden.
+    - file is not present [This will create a new file]
+append:
+    - it opens an existing file for append operation.
+    - it consist override existing content.
+    - file is not present [This will create a new file]
+r+ :
+    - read and write data into the file.
+    - existing content will not get deleted
+w+ :
+    - to write and read data into the file.
+    - existing content will override.
+a+ :
+    - to append and read data from the file.
+    - existing content will not change and write the content.
+x :
+    - Exclusive Operation
+    - if file is already present [FileExist] Error
+    - if file is not present. a new file will create
+
+Binary modes : rb, wb, ab, r+b, w+b, a+b, xb
+
+close
+file.close()
+ex:
+    f.close()
+
+properties of file:
+1. File Name
+2. Mode
+3. Readable()
+4. Writable()
+5. Closed
+        Status - True or False
+
+With Statement
+with open(filename, mode) as file:
+    # block of code
+
+If we provide the with statement, it is not necessary to give file.close() function.
+ex:
+with open("D:\\Practice\\Python-Course\\fileHandling\\test", "r") as file:
+    print("File is closed or not - ", file.closed)
+
+tell() - It denote cursor position.
+    - It returns the current position of the cursor.
+seek()
+    - It returns the change the cursor position.
+
+if file is present or not using this module - import the os module
+    os.path.isfile(filename)
+os - module
+path - sub module
+isfile - function
+filename - paramater
+
+CSV File Handling
+
+CSV - Comma Separated Values
+
+import csv module using csv files
+
