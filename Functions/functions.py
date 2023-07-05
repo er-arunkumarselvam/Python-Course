@@ -109,15 +109,16 @@ def tellMeYourName(*names):  # Passing to parameters. it denoted by *.  - DataTy
     for name in names:
         print(name, end="  ")
 
+
 print()
 tellMeYourName('Arun', 'Shafik', 'Dharma', 'Vinith', 'Vignesh')
-
 
 
 # Variable length Arguments
 def totalPrice(sellingPrice, buyingPrice):
     print(sellingPrice)
     print(buyingPrice)
+
 
 print()
 totalPrice(100, 90)  # Two Arguments was passed
@@ -127,7 +128,84 @@ def totalPrice(*amount):  # Get all the parametes using variable length argument
     for cash in amount:
         print(cash)
 
+
 print()
 totalPrice(100, 90, 5, 5)  # sellingprice = 100, buyingprice = 90, SGST = 5, CGST = 5
 print(id(x))
 
+
+def mrp(buyingPrice, sellingPrice,
+        **tax):  # Get all the parametes using variable length argument - DataType is Dictionary
+    print(buyingPrice)
+    print(sellingPrice)
+    for key, value in tax.items():
+        print(key, type(key))
+        print(value, type(value))
+
+
+mrp(90, 100, CGST=5, SGST=5)
+print()
+
+# Composition of function
+def tellMeNumber():
+    return 5
+
+
+print(tellMeNumber())
+print(tellMeNumber)
+
+
+def tellMeNumber(no):
+    return no
+
+
+print(tellMeNumber(50))
+
+# in-built functions
+# absolute
+print(abs(5.2))
+print(abs(5))
+# ordinal
+print(ord('A'))
+print(ord('a'))
+# character
+print(chr(65))
+print(chr(97))
+# binary
+print(bin(6))
+# minimum
+listed = [15, 75, 10, 95, 5, 6]
+print(min(listed))
+# maximum
+print(max(listed))
+# sum or addition
+print(sum(20, 30))
+# type
+print(type('A'))
+# round-off
+print(round(2.4))
+print(round(2.7))
+# find power
+print(pow(3, 3))
+print()
+# floor - just below round off the given value
+import math
+no1 = 3.14
+no2 = 3.5
+no3 = 3.71
+no4 = -3.14
+print(math.floor(no1))
+print(math.floor(no2))
+print(math.floor(no3))
+print(math.floor(no4))
+print()
+# ceil - just above round off the given value
+print(math.ceil(no1))
+print(math.ceil(no2))
+print(math.ceil(no3))
+print(math.ceil(no4))
+print()
+# square root
+print(math.sqrt(no1))
+print(math.sqrt(no2))
+print(math.sqrt(no3))
