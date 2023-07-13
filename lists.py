@@ -69,8 +69,58 @@ for listItem in both:
         if type(listMembers)==str:
             print(listMembers, end=" ")
     print()
-
-
-
-
-
+# Print While Loop
+alpha=['c','a','b','c']
+number=[1,2,4,3]
+both=[alpha,number]
+li=0
+while li<len(both): #li=0 < len(both)=2
+    item=0
+    while item<len(both[li]): # item=0 both[li]=4
+        print(both[li][item],end=" ") # both [0] [0]
+        item+=1
+    print()
+    li+=1
+print()
+# Print only alphabets
+alpha=['c','a','b','c']
+number=[1,2,4,3]
+both=[alpha,number]
+li=0
+while li<len(both):
+    item=0
+    while item<len(both[li]):
+        if type(both[li][item])==str:
+            print(both[li][item],end=" ")
+        item+=1
+    print()
+    li+=1
+print()
+# MicroProgram
+hrNames=['Arun','Krishna','Vijay']
+developerNames=['Shafik','Dharma','Ajay']
+testerNames=['Vinith','Vignesh']
+adminNames=['Balaji','Prasanna','Aravind','Vengatesh']
+companyEmployees=[hrNames,developerNames,testerNames,adminNames]
+li=0
+#print all names
+while li<len(companyEmployees):
+    item=0
+    while item<len(companyEmployees[li]):
+        print(companyEmployees[li][item],end=" ")
+        print()
+        item+=1
+    print()
+    li+=1
+print()
+#print only names starting letter 'A'
+while li<len(companyEmployees):
+    item=0
+    while item<len(companyEmployees[li]):
+        if (companyEmployees[0:])=='A':
+            print(companyEmployees[li][item],end=" ")
+            print()
+        item+=1
+    print()
+    li+=1
+print()
