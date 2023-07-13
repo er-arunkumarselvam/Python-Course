@@ -1,0 +1,127 @@
+EXCEPTION HANDLING
+
+What is the difference between error and exception handling?
+example of syntax error:
+if x ==10 (missing ':')
+    for x in range(10):
+        print(x)
+output:
+1. SyntaxError: expected ':'
+
+ - syntax error is known as compile time error.
+Compile Time / Interpretation Time:
+    - converting .py file into byte code. (or) byte code transformation.
+    .py --> byte code --> binary file
+
+When program run line by line, If missing any line mistake don't execute next line.
+
+2. Exception:
+    - Exception is runtime error,
+    - After your python code getting is convert into binary code.
+    - some error can happen during runtime, those error is known as exception.
+
+    ex:
+    x=int(input("enter your no1: "))
+    y=int(input("enter your no2: "))
+    print(x/y) # infinity
+
+    # put y value is 0 --> ZeroDivisionError: division by zero
+    # put y value is any str --> ValueError: invalid literal for int() with base 10: 'x'
+
+    output:
+    ZeroDivisionError: division by zero - (this is called Exception)
+    ValueError: invalid literal for int() with base 10: 'x'
+
+    - An unexpected event occurred that stop the normal flow of a program is known as exception.
+
+    print(arunkumar) # missing single or double quotes
+
+    output:
+    - NameError: name 'arunkumar' is not defined
+
+    print("Arun"+5) # two str are concatenate
+
+    output:
+    - TypeError: can only concatenate str (not "int") to str
+
+    file = open("abc.txt")
+    print(file.read())
+
+    output:
+    - FileNotFoundError: [Errno 2] No such file or directory: 'abc.txt'
+
+- TypeError, NameError, ZeroDivisionError, ValueError and FileNotFoundError are python class.
+
+Object:
+    - It has real time entity.
+    - It is combinations of states and behaviour.
+    ex: Indian Human
+    States - Colour, Height, Hair Style and Dressing, etc.,
+    Behaviour - VoterId(), Vote(), AadharCard()
+
+Class:
+    - class is a template or blueprint. where we are keeping all the functions and data member inside.
+    - classes are reusable
+    - class contains combinations of variables and  methods.
+
+Class is a collection of objects, Not why?
+- add object in list, list is not a class. but list contain collection of objects.
+
+Exception Handling:
+   Syntax:
+            try:
+                //Block of code
+            except ExceptionErrorName:
+                //Block of code
+
+                        or
+            try:
+                //Block of code
+            except ExceptionErrorName, ExceptionErrorName : # for more exception
+                //Block of code
+            ex:
+                try:
+                    print(10/0)
+                except ZeroDivisionError as msg:
+                    print(type(msg))
+
+                try:
+                    print(10/0)
+                except ZeroDivisionError:
+                    print(100/5)
+
+   - Error raised in try block. so alternative solution given by except block.
+
+            try:
+                # Exception possible area
+            except:
+                # Exception Handling area
+
+Incase Exeception Name is don't know. you can put except only atlast.
+
+Python Exception Handling Keywords:
+            - try
+            - except
+            - else
+            - finally
+            - raise
+
+How to read online file reads?
+    - First read browser
+    - try python web drivers
+
+split():
+    - with the delimiter given its splits the words or sentance.
+    delimiter - , : . / - @
+
+    ex:
+        file =open(r'/home/arun/Music/python/ExceptionHandling/pincodes.txt')
+        for each_line in file:
+            (city,pincode) = each_line.split("-")
+            print("pincode of",city,end="")
+            print("is",pincode,end="")
+        file.close()
+
+
+
+
