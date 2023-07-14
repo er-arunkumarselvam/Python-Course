@@ -121,6 +121,112 @@ split():
             print("pincode of",city,end="")
             print("is",pincode,end="")
         file.close()
+--------------------------------------------------------------------------------------------------------------------------------
+FileNotFoundException Handling
+
+        try:
+            file =open(r'/home/arun/Music/python/ExceptionHandling/pincode.txt')
+        except:
+            print("check the file location")
+
+        Output:
+        check the file location
+
+Note: If I create a try block, it compulsory present except or finally block.
+
+        eg: Incase missing of except or finally block, the machine throws syntax error
+
+            SyntaxError: expected 'except' or 'finally' block
+
+    -Nested try and except block is possible.
+    -One try more than one except block is possible.
+
+
+pass - Keyword --> Immediate skip into exception, it is not a solution, used for temporary only. after find the exception to fix the except block.
+
+Default Exception at present end of all exceptions like:
+
+    ex:
+        try:
+            // Block of code
+        except ExceptionName:
+            // Block of code
+        except:     -----------------> Default exception
+            // Block of code
+
+Finally:
+    - Finally always run all time
+    Usage of finally:
+        -DB cleaning, connection closing 
+    ex: automatically logout, session expired scenarios.
+
+    finally:
+        # DB closing code
+        # connection closing code
+
+# MicroProgram 
+import sys
+
+inputList = ['a', 0, False, 1, 2, 8, 10]
+
+for entry in inputList:
+    try:
+        print("The entry is", entry)
+        r = 1/entry
+        break
+    except:
+        print("Opps!", sys.exc_info()[0], "occurred.") # change the index number 0, 1 and 2. output will change.
+        print("Next entry")
+        print()
+print("The reciprocal of",entry, "is",r)
+
+sys.exc_info() - system.exception_information()
+
+Q&A:
+1. Exception:
+    - Exception during runtime unexpected event that stop the normal flow of a program. In python, Exception is a class.
+
+2. Error vs Exception:
+    - SyntaxError can be found during compile time error. But exception can be handled by the programmer using try and except block.
+
+3. Few Built-in Exception:
+    - ValueError
+    - ZeroDivisionError
+    - TypeError
+    - FileNotFoundError
+    - NameError
+    - AttributeError
+
+4. Exception Keywords in Python:
+    - try
+    - except
+    - finally
+    - raise
+    - else
+
+5. try without except:
+    - try without except is an error. try block must have except block or finally block or both.
+
+6. try with multiple except:
+    - It's possible. we can multiple except block for each Exception class in python.
+
+7. How do you handle exceptions if you don't know the exact exception class name in python?
+    - yes, it's possible, if we have don't know the what exceptions will raise in try block at that time we can go for Default except block.
+
+8. try except finally:
+    - here order is important, only after except, finally should be present. Finally block will be executed. if an exception raised or not.
+
+9. Default except:
+    - if we don't provide handling code by default exception are handled by PVM(Python Virtual Machine).
+
+10. can we handle more than one exception in a single except statement?
+    - Yes. we can handle the exception separate by using the comma (,).
+
+    ex: except(AttributeError, ValueError):
+            pass
+
+
+
 
 
 
