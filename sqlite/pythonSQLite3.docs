@@ -1,0 +1,115 @@
+PYTHON SQLITE3 DATABASE:
+
+Default DB in Python - SQLITE3
+
+DataBase:
+    - Table Format 
+    - Table - Rows and Columns
+    - It like imagine excel sheet format
+
+
+RDBMS:
+    - Relational DataBase Management Service
+    - Implement Oracle, MySQL, SQLServer, and SQLITE3
+    - Usage of RDBMS will various places
+
+BigData:
+    - Advanced and Improvement of RDBMS
+    - Hadoop software
+
+Cloud Computing:
+    - Storage of Next level in Big Data
+
+
+Questions for DB connections:
+
+- explain connect()
+- explain cursor()
+- difference between drop vs truncate
+
+    Drop: Delete the entire structure of table.
+    Truncate: Clear the temporary data
+
+    
+
+SQLITE3 Commands:
+
+1. Create Table - CREATE TABLE TABLE_NAME(COLUMN_NAME DATATYPE PRIMARY KEY);
+
+    EX: CREATE TABLE Student(
+        RollNo INTEGER PRIMARY KEY,
+        StudentName VARCHAR(25),
+        Gender CHAR(1),
+        DOB DATE,
+        Percentage DECIMAL(5,2)
+        );
+
+2. Insert Data - INSERT INTO TABLE_NAME(COLUMN_NAME) VALUES(values);
+
+    EX: INSERT INTO Student(RollNo,StudentName,Gender,DOB,Percentage)
+        VALUES(NULL, "Arunkumar",'M','1998-12-05', 75.64);
+
+
+3. Delete Table - DROP TABLE TABLE_NAME;
+
+    EX: DROP TABLE Student;
+
+4. Read the Table - SELECT * FROM TABLE_NAME
+
+    Ex: SELECT * FROM Student
+
+    * - Every column values in the table
+
+5. Read the Particular column value - SELECT DISTINCT(COLUMN_NAME) FROM TABLE_NAME;
+
+    EX: SELECT DISTINCT(StudentName) FROM Student
+
+6. Count the data - SELECT count(*) FROM TABLE_NAME;
+
+    EX: SELECT count(*) FROM Student
+
+7. Delete the data - DELETE FROM TABLE_NAME WHERE COLUMN_NAME='VALUES';
+
+    EX: DELETE FROM Student WHERE RollNo='4'
+
+8. UPDATE the data - UPDATE TABLE_NAME SET COLUMN_NAME = "change_value" WHERE COLUMN_NAME = VALUE;
+
+    EX: UPDATE Student SET StudentName = "Kaavya" WHERE RollNo=4;
+
+    <> - it means not equal
+    
+
+Connections of python and sqllite3:
+
+    - import sqllite3 #module
+    - Connection established between python and sqllite using connect()
+
+        connection =sqllite3.connect("filepath")
+
+    - cursor means to type the python command into sql commands.
+        
+        cursor= cursor.connection()
+
+    - to execute the sql commands using execute()
+
+        cursor.execute("SQL Commands")
+
+    - format the data enter using format()
+
+        variableName.format()
+
+    - Read the data using fetchall() - keep all the data
+                          fetchmany() - given no of rows data only printed
+                          fetchone() - row 1 only printed
+
+        cursor.fetchall()
+        cursor.fetchone()
+        cursor.fetchmany(2)
+
+    - Finally to compulsory commit(). It like save the table to retrieve the data in future.
+
+        connection.commit()
+
+    - close to the connection
+
+        connection.close()
